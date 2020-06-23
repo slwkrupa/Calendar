@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kalendarz</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="calendar"> 
+		<div class="date">
+			<h3 id="month"></h3>
+				<div class="days">
+					<div class="day">Mo</div>
+					<div class="day">Tu</div>
+					<div class="day">Wed</div>
+					<div class="day">Thu</div>
+					<div class="day">Fr</div>
+					<div class="day">Sat</div>
+					<div class="day">Sun</div>
+			</div>
+			
+		</div>
+		<div class="image">
+			<img src="img.jpg">
+		</div>
+	</div>
+
+<script language="javaScript"> 
+
+	var sysDate = new Date();
+    var day=sysDate.getDay();
+    var month=sysDate.getMonth()+1;
+	var numberofday=sysDate.getDate();
+
+	switch(month){
+        case 1: var miesiac="January";
+                break;
+        case 2: var miesiac="February";
+                break;
+        case 3: var miesiac="March";
+                break;
+        case 4: var miesiac="April";
+                break;
+        case 5: var miesiac="May";
+                break;
+        case 6: var miesiac="June";
+                break;
+        case 7: var miesiac="July";
+                break;
+        case 8: var miesiac="August";
+                break;
+        case 9: var miesiac="September";
+                break;
+        case 10: var miesiac="October";
+                break;
+        case 11: var miesiac="November";
+                break;
+        case 12: var miesiac="December";
+                break;
+    }
+
+	document.getElementById('month').innerHTML=miesiac;
+</script>
+</body>
+</html>
